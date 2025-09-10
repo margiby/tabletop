@@ -1,0 +1,97 @@
+.sidebar-table-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--primary-hover);
+  background-color: var(--background-color);
+  padding: 1rem;
+  box-shadow: -2px 0 8px rgba(76, 175, 145, 0.1);
+  overflow-y: auto;
+  border-radius: 8px;
+  /* Begrenze die Breite auf die Grid-Spalte */
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  /* Wichtig für Flex/Grid-Layouts */
+  box-sizing: border-box;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--primary-hover);
+}
+
+.sidebar-header .title {
+  color: var(--text-color);
+  margin-bottom: 0;
+}
+
+.close-button {
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--primary-color);
+  line-height: 1;
+}
+
+.close-button:hover {
+  color: var(--primary-dark-active);
+}
+
+.table {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  max-width: 100%;
+  overflow-x: auto;
+  /* border: 2px solid var(--primary-hover);
+  border-radius: 8px; */
+}
+
+.table thead th {
+  color: var(--primary-dark-active) !important;
+  background-color: var(--box-background);
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.table tbody tr:hover {
+  background-color: var(--primary-hover);
+  color: #284b45;
+}
+
+.table.is-striped tbody tr:nth-of-type(odd) {
+  background-color: var(--box-background);
+  color: var(--text-color);
+}
+
+.table td,
+.table th {
+  border-right: 1px solid var(--primary-hover) !important;
+  word-break: break-word;
+  white-space: pre-line;
+  color: inherit;
+  hyphens: auto;
+  background-color: var(--box-background);
+}
+
+.table th {
+  align-items: center !important;
+  text-align: center !important;
+}
+
+.table th:last-child,
+.table td:last-child {
+  border-right: none !important;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow: hidden; /* Geändert: Versteckt überstehenden Inhalt */
+  border: 2px solid var(--primary-hover); /* Hinzugefügt */
+  border-radius: 8px;
+}
